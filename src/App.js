@@ -1,24 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import { Redirect, Route, Switch } from 'react-router';
+import Home from './features/Home/Home';
+import Login from './features/Login/Login';
+import { useSelector } from 'react-redux';
+import Skillstore from './features/Skillstore/Skillstore';
+import Skill from './features/Skill/Skill';
+import ScrollToTop from './features/ScrollToTop/ScrollToTop';
+import Category from './features/Category/Category';
 
 function App() {
+
+  const showLogin = useSelector(state=>state.login.showLogin)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ScrollToTop></ScrollToTop>
+      <Switch>
+        <Route exact path='/home'>
+          <Home></Home>
+        </Route>
+        <Route exact path='/skillstore'>
+          <Skillstore></Skillstore>
+        </Route>
+        <Route exact path='/skill/:skill'>
+          <Skill></Skill>
+        </Route>
+        <Route exact path='/category/:category'>
+          <Category></Category>
+        </Route>
+        <Redirect from='/' to='/home'></Redirect>
+      </Switch>
+      {showLogin?<Login></Login>: null}
+    </>
   );
 }
 

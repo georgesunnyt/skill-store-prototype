@@ -1,0 +1,31 @@
+.home-container {
+    height: 100vh;
+    background-color: khaki;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 10vw;
+    margin-top: 15vh;
+}
+
+.tagline {
+    font-size: 3vw;
+}
+
+.sign-in-text {
+    margin: 5vh 0 1vh 0;
+    font-weight: 500;
+}
+
+button {
+    border: 2px solid black;
+    border-radius: 7px;
+    height: 6vh;
+    width: 7vw;
+    background-color:cornsilk;
+    cursor: pointer;
+    font-size: 1vw
+}

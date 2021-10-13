@@ -1,0 +1,52 @@
+    .skill-page {
+        min-height: 100vh;
+        overflow-y: auto;
+        background-color: rgb(255, 239, 195);
+        padding: 3vh 5vw;
+    }
+
+    .skill-container {
+        border: 2px solid black;
+        border-radius: 9px;
+        padding: 2vh 1vw;
+        margin: 5vh 0;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .skill-heading {
+        background-color: cornsilk;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 1vh 1vw;
+        border-radius: 9px;
+        font-size: 4vw;
+    }
+
+    .description-container {
+        min-height: 60vh;
+        background-color: cornsilk;
+        border-radius: 8px;
+        margin-top: 4vh;
+        padding-left: 2vw;
+        padding-top: 2vh;
+    }
+
+    .description-heading {
+        font-size: 2.5vw;
+        margin: 1vh 0;
+    }
+
+    .description {
+        font-size: 1.5vw;
+    }
+
+    .utterance-heading {
+        margin-top: 4vh;
+        font-size: 2.5vw;
+    }
+
+    .utterance {
+        margin-top: 1.5vh;
+        font-size: 1.5vw;
+    }
+
+

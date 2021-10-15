@@ -1,4 +1,4 @@
-import './Categories.css'
+import './Carousel.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useHistory } from 'react-router'
 export default function Categories ({heading, items, category, image}) {

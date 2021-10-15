@@ -1,7 +1,7 @@
 import './Skillstore.css'
 import { faCalculator, faDiagnoses, faGraduationCap, faHelicopter, faSyringe } from '@fortawesome/free-solid-svg-icons'
 import { faAndroid, faCodepen, faFly, faReact } from '@fortawesome/free-brands-svg-icons'
-import Categories from '../Categories/Categories'
+import Carousel from '../Carousel/Carousel'
 
 export default function Skillstore() {
 
@@ -54,13 +54,13 @@ export default function Skillstore() {
             skills: [{
                 name: 'React JS',
                 image: faReact,
-                desciption: 'Coding with react js',
+                description: 'Coding with react js',
                 utterances : ['Create a social media app with react', 'Create a dashboard using react', 'Create a skill store using react']
             },
             {
                 name: 'Android developer',
                 image: faAndroid,
-                desciption: 'android dev who could make pretty much anything',
+                description: 'android dev who could make pretty much anything',
                 utterances: ['Create an app to track my expenses', 'Create an app to track my workouts']
             }]
         },
@@ -70,7 +70,7 @@ export default function Skillstore() {
             skills: [{
                 name:'Helicopter pilot',
                 image: faHelicopter,
-                desciption:'expert chopper operator',
+                description:'expert chopper operator',
                 utterances: ['fly me to bangalore', 'airlift me to a hospital']
             }]
         },
@@ -88,9 +88,9 @@ export default function Skillstore() {
 
     return (
         <div className='skillstore-container'>
-            <Categories heading='Categories' category={true} items={categories}></Categories>
-            <Categories heading='Top Skills' items={topskills}></Categories>
-            <Categories heading='Recent Skills' items={recentskills}></Categories>
+            <Carousel heading='Categories' category={true} items={categories}></Carousel>
+            <Carousel heading='Top Skills' items={topskills}></Carousel>
+            <Carousel heading='Recent Skills' items={recentskills}></Carousel>
         </div>
     )
 }

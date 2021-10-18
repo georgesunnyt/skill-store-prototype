@@ -7,6 +7,7 @@ import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 import { toggleLogin } from './loginSlice'
 import { useHistory } from 'react-router'
 import GoogleLogin from 'react-google-login'
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
 
 export default function Login () {
 
@@ -54,6 +55,10 @@ export default function Login () {
         setError("google sign in failed")
         console.log(response)
     }
+
+    const responseFacebook = (response) => {
+        console.log(response)
+    }
  
     return(
         <div className='login-container'>
@@ -72,10 +77,18 @@ export default function Login () {
                 onFailure={failureGoogle}
                 cookiePolicy={'single_host_origin'}
             />
-            <button className='facebook-login'>
-                <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
-                <span> Continue with Facebook </span>
-            </button>
+            <FacebookLogin
+                appId="415261549978747"
+                autoLoad={true}
+                fields="name,picture"
+                callback={responseFacebook}
+                render={renderProps => (
+                    <button className='facebook-login' onClick={renderProps.onClick}>
+                        <FontAwesomeIcon icon={faFacebook}></FontAwesomeIcon>
+                        <span> Continue with Facebook </span>
+                    </button>
+                  )} 
+            />
             <div className='or'>OR</div>
             {type==='login'?
                 <div>

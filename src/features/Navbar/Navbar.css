@@ -1,0 +1,32 @@
+.nav-container {
+    display: flex;
+    background-color: black;
+    color: white;
+    height: 10vh;
+    padding: 0 1vw;
+}
+
+.nav-title {
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.nav-end {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.nav-end div {
+    margin-right: 1vw;
+    font-size: 2rem;
+}
+
+.nav-end img {
+    clip-path: circle(40%);
+}
+
+.fa-user-circle {
+    font-size: 2vw;
+    margin-right: 1vw;
+}

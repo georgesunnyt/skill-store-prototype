@@ -4,8 +4,8 @@
     flex-direction: column;
     position: absolute;
     align-items: center;
-    width: 20vw;
-    height: 75vh;
+    min-width: 20vw;
+    min-height: 75vh;
     left:50%;
     transform: translateX(-50%);
     top: 10%;
@@ -22,7 +22,7 @@
 
 .login-title {
     margin-top: 4vh;
-    font-size: 1.2vw;
+    font-size: 1.2rem;
 }
 
 .login-container button {
@@ -55,7 +55,7 @@
     margin-top: 2vh;
     width: 17vw;
     height: 5vh;
-    font-size: 1vw;
+    font-size: 1rem;
     border: 2px solid black;
     border-radius: 7px;
     padding-left: 0.5vw;
@@ -76,6 +76,6 @@
 }
 
 .login-error {
-    font-size: 0.8vw;
+    font-size: 0.8rem;
     color: red
 }

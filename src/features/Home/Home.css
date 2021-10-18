@@ -7,12 +7,12 @@
 }
 
 .title {
-    font-size: 10vw;
+    font-size: 10rem;
     margin-top: 15vh;
 }
 
 .tagline {
-    font-size: 3vw;
+    font-size: 3rem;
 }
 
 .sign-in-text {
@@ -23,9 +23,9 @@
 button {
     border: 2px solid black;
     border-radius: 7px;
-    height: 6vh;
-    width: 7vw;
+    height: 4rem;
+    width: 7rem;
     background-color:cornsilk;
     cursor: pointer;
-    font-size: 1vw
+    font-size: 1rem;
 }

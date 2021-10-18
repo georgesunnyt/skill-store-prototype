@@ -2,7 +2,9 @@ import { createSlice } from "@reduxjs/toolkit"
 
 let initialState = {
     showLogin: false,
-    type: ''
+    type: '',
+    name: localStorage.getItem('username'),
+    image: localStorage.getItem('image')
 }
 
 let loginSlice = createSlice({
@@ -10,13 +12,17 @@ let loginSlice = createSlice({
     initialState,
     reducers: {
         toggleLogin(state, action) {
-            state.type = action.payload.type
-            const {show, type} = action.payload
+            const {show, type, username, image} = action.payload
             state.showLogin = show
             state.type = type
+            state.name = username
+            state.image = image
+        },
+        logout(state) {
+            state.name = ''
         }
     }
 })
 
-export const {toggleLogin} = loginSlice.actions
+export const {toggleLogin, logout} = loginSlice.actions
 export default loginSlice.reducer

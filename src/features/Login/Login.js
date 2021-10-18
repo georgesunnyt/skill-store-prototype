@@ -58,6 +58,12 @@ export default function Login () {
 
     const responseFacebook = (response) => {
         console.log(response)
+        let username = response?.name
+        let image = response?.data?.picture?.url
+        localStorage.setItem('username', username)
+        localStorage.setItem('image', image)
+        dispatch(toggleLogin({showLogin: false, type:'facebook', username, image}))
+        history.push('/skillstore')
     }
  
     return(
@@ -79,7 +85,7 @@ export default function Login () {
             />
             <FacebookLogin
                 appId="415261549978747"
-                autoLoad={true}
+                autoLoad={false}
                 fields="name,picture"
                 callback={responseFacebook}
                 render={renderProps => (

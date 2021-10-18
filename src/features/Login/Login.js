@@ -59,7 +59,8 @@ export default function Login () {
     const responseFacebook = (response) => {
         console.log(response)
         let username = response?.name
-        let image = response?.data?.picture?.url
+        let image = response?.picture?.data?.url
+        console.log(image)
         localStorage.setItem('username', username)
         localStorage.setItem('image', image)
         dispatch(toggleLogin({showLogin: false, type:'facebook', username, image}))

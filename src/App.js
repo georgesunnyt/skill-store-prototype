@@ -8,6 +8,7 @@ import Skill from './features/Skill/Skill';
 import ScrollToTop from './features/ScrollToTop/ScrollToTop';
 import Category from './features/Category/Category';
 import Navbar from './features/Navbar/Navbar';
+import ProtectedRoute from './ProtectedRoute';
 
 function App() {
 
@@ -22,15 +23,9 @@ function App() {
         <Route exact path='/home'>
           {username? <Redirect to='/skillstore'></Redirect> : <Home></Home>}
         </Route>
-        <Route exact path='/skillstore'>
-          <Skillstore></Skillstore>
-        </Route>
-        <Route exact path='/skill/:skill'>
-          <Skill></Skill>
-        </Route>
-        <Route exact path='/category/:category'>
-          <Category></Category>
-        </Route>
+        <ProtectedRoute exact path='/skillstore' component={Skillstore} username={username}></ProtectedRoute>
+        <ProtectedRoute exact path='/skill/:skill' component={Skill} username={username}></ProtectedRoute>
+        <ProtectedRoute exact path='/category/:category' component={Category} username={username}></ProtectedRoute>
         <Redirect from='/' to='/home'></Redirect>
       </Switch>
       {showLogin?<Login></Login>: null}

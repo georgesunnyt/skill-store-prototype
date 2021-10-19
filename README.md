@@ -1,1 +1,1 @@
-A dummy protoype to check out amazing skills
+A dummy protoype to test out facebook and google sign in

@@ -3,4 +3,5 @@
     overflow-y: auto;
     background-color: rgb(255, 239, 195);
     padding: 3vh 5vw;
+    animation:slide-right 0.6s;     
 }

@@ -2,3 +2,13 @@ button:active {
   transform: scale(0.9);
   transition: 1s;
 }
+
+@keyframes slide-right {
+  0% {
+      transform: translateX(-6vw);
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0vw);
+  }
+}
